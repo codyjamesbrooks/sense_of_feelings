@@ -2,5 +2,11 @@
 // Run that command whenever you add a new controller
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import SelectInterfaceController from "./select_interface_controller.js"
+application.register("select-interface", SelectInterfaceController)
+
+import TitleUpdateController from "./title_update_controller.js"
+application.register("title-update", TitleUpdateController)
+
+import ClipboardController from "./clipboard_controller.js"
+application.register("clipboard", ClipboardController)
