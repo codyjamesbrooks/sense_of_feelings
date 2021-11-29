@@ -1,1 +1,2 @@
 <%= poll.title ? poll.title : "Give this poll a title" %>
+<%= link_to "#{new_poll_reply_url(poll)}", new_poll_reply_path(poll) %>
