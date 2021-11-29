@@ -3,13 +3,13 @@
     <h1 class="page-title"
         data-title-update-target="display"
         data-action="click->title-update#editTitle">
-        <%# <%= poll.title %> <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %> %>
+        <%= poll.title %> <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %>
     </h1>
   <% else %>
     <h1 class="editable"
         data-title-update-target="display"
         data-action="click->title-update#editTitle">
-        <%# Untitled Poll... <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %> %>
+        <% Untitled Poll... <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %>
     </h1>
   <% end %>
   
