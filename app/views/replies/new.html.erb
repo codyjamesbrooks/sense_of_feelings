@@ -1,7 +1,2 @@
 <h1><%= poll.title ? poll.title : 'Untitled poll' %></h1>
-<%= form_for reply, url: { action: "create" } do |f| %>
-  <%= f.select(:value, 
-      options_for_select([[0, 0],
-                          [1, 1]]))%>
-  <%= f.submit "Create a reply" %>
-<% end %>
+<%= render "form" %>

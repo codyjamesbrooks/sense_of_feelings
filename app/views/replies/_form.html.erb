@@ -1,0 +1,16 @@
+<div class="outer-wrapper" 
+     data-controller="select-interface"
+     data-select-interface-selected-class="selected">
+  <%= render "select_interface" %>
+  <%= form_for reply, url: { action: "create" } do |reply_form| %>
+    <%= reply_form.select(:value, 
+        options_for_select([[0, 0],
+                            [1, 1],
+                            [2, 2, selected: true],
+                            [3, 3],
+                            [4, 4]]), 
+       {}, 
+       { class: "hidden", data: { "select-interface-target": "parent" } }) %>
+   <%= reply_form.submit "Reply to Poll" %>
+  <% end %>
+</div>

@@ -1,0 +1,19 @@
+<div data-controller="title-update">
+  <% if poll.title %>
+    <h1 class="page-title"
+        data-title-update-target="display"
+        data-action="click->title-update#editTitle">
+        <%# <%= poll.title %> <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %> %>
+    </h1>
+  <% else %>
+    <h1 class="editable"
+        data-title-update-target="display"
+        data-action="click->title-update#editTitle">
+        <%# Untitled Poll... <%= image_tag("edit_pencil", class: "small-icon", alt: "Edit Title", title: "Edit Title") %> %>
+    </h1>
+  <% end %>
+  
+  <%= form_for poll, method: :patch, html: { class: "hidden", data: { "title-update-target": "edit" } } do |f| %>
+    <%= f.text_field :title, placeholder: title_examples, class: "edit-input", autofocus: true, required: true, title: "You've come this far, dont leave it blank now" %>
+  <% end %>
+</div>
