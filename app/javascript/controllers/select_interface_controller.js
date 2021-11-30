@@ -6,7 +6,14 @@ export default class extends Controller {
   static targets = [ 'parent' , 'option' ]
 
   initialize() {
+    this.labelInterfaceOptions()
     this.highlightSelectedTarget()
+  }
+
+  labelInterfaceOptions() {
+    this.optionTargets.forEach((element, index) => {
+      element.querySelector('.label').innerHTML = this.parentTarget.options[index].text
+    })
   }
 
   selectOption(event) {
