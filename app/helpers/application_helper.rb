@@ -22,13 +22,6 @@ module ApplicationHelper
     end
   end 
 
-  # colors
-  # red #f94144
-  # orange #f9844a
-  # yellow #f9c74f
-  # green #90be6d
-  # blue #E577590
-
   def title_examples 
     ["a bunch of things", 
       "cool butt title",
