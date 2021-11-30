@@ -44,6 +44,10 @@ body {
   margin-bottom: 7px;
 }
 
+.emoji-index {
+  font-size: 1.4em;
+}
+
 .subtitle {
   font-family: var(--subTitle-font)
 }
@@ -94,6 +98,10 @@ body {
 .edit-input:focus{
   outline: none;
   border: none;
+}
+
+#chart-1 {
+  font-size: 16px !important;
 }
 
 .outer-wrapper {
