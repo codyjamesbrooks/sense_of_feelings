@@ -81,8 +81,12 @@ body {
 }
 
 .edit-input {
+  margin-bottom: .67em;
   padding: 10px 10px; 
-  height: 32px; 
+  height: 58px; 
+  width: 350px;
+  color: var(--text-color);
+  font-size: 1.4em;
   text-align: center;
   background: #d1d1d1;
   border: none;

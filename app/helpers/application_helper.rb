@@ -23,20 +23,13 @@ module ApplicationHelper
   end 
 
   def title_examples 
-    ["a bunch of things", 
+    ["The Weather", 
       "cool butt title",
-      "This title is as cool as you are", 
-      "A great poll", 
-      "My teams feelsings"
+      "Thoughts on Pangea", 
+      "Hot Pockets", 
+      "My teams feelings",
+      "The City of Cleveland",
+      "Cold Sores"
     ].sample
-  end 
-
-  def library_options 
-    { scales: {
-        xAxis: { 
-          ticks: { allowDecimals: false }
-        }
-      }
-    }
   end 
 end
