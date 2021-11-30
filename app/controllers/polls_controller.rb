@@ -2,7 +2,7 @@ class PollsController < ApplicationController
   expose :poll
   expose :replies, from: :poll
 
-  def new 
+  def create 
     poll.save
     redirect_to poll_path(poll) 
   end
@@ -15,6 +15,6 @@ class PollsController < ApplicationController
   private
 
   def poll_params
-    params.require(:poll).permit(:title, :id) if action_name.to_sym != :create
+    params.fetch(:poll, {}).permit(:title, :id)
   end 
 end 
